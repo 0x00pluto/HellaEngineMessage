@@ -1,12 +1,25 @@
 {
   "name": "hella-engine/rpc-message",
   "type": "library",
+  "keywords": [
+    "rpc",
+    "rpc-message"
+  ],
   "description": "HellaEngine RPC message php code",
   "require": {
     "php": ">=5.3.0"
   },
   "license": "MIT",
   "autoload": {
-    "psr-4": { "HellaEngine\\RPCMessage\\": "src/" }
-  }
+    "psr-0": {
+      "HellaEngine\\RPCMessage": "src/RPCMessage"
+    }
+  },
+  "authors": [
+    {
+      "name": "peng.zhi",
+      "email": "babety@163.com",
+      "role": "Developer"
+    }
+  ]
 }
