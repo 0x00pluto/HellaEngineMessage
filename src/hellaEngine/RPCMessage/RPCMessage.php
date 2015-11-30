@@ -44,7 +44,7 @@ class RPCMessage
     /**
      * MessageBody
      */
-    const MessageData_Body = 'body';
+    const MessageData_Body = 'data';
 
 
     /**
