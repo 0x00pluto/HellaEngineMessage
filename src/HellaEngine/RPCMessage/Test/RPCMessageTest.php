@@ -6,10 +6,10 @@
  * Time: 下午3:05
  */
 
-namespace HellaEngine\RPCMessage\Test;
+namespace hellaEngine\RPCMessage\Test;
 
 
-use HellaEngine\RPCMessage\RPCMessage;
+use hellaEngine\RPCMessage\RPCMessage;
 
 require_once __DIR__ . '/../../../../vendor/autoload.php';
 

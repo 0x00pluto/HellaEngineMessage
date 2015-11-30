@@ -6,7 +6,7 @@
  * Time: 下午3:37
  */
 
-namespace HellaEngine\RPCMessage\Exceptions;
+namespace hellaEngine\RPCMessage\Exceptions;
 
 
 /**

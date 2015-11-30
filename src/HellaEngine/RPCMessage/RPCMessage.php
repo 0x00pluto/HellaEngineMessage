@@ -6,7 +6,7 @@
  * Time: 下午5:13
  */
 
-namespace HellaEngine\RPCMessage;
+namespace hellaEngine\RPCMessage;
 
 
 /**

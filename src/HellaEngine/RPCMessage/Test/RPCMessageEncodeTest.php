@@ -6,11 +6,11 @@
  * Time: 下午4:18
  */
 
-namespace HellaEngine\RPCMessage\Test;
+namespace hellaEngine\RPCMessage\Test;
 require_once __DIR__ . '/../../../../vendor/autoload.php';
 
-use HellaEngine\RPCMessage\RPCMessage;
-use HellaEngine\RPCMessage\RPCMessageEncode;
+use hellaEngine\RPCMessage\RPCMessage;
+use hellaEngine\RPCMessage\RPCMessageEncode;
 
 class RPCMessageEncodeTest extends \PHPUnit_Framework_TestCase
 {

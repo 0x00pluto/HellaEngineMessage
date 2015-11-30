@@ -6,10 +6,9 @@
  * Time: 下午3:35
  */
 
-namespace HellaEngine\RPCMessage;
+namespace hellaEngine\RPCMessage;
+use hellaEngine\RPCMessage\Exceptions\encodeMessageException;
 
-
-use RPCMessage\Exceptions\encodeMessageException;
 
 /**
  * Class RPCMessageEncode
