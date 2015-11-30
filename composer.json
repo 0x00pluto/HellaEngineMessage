@@ -8,12 +8,13 @@
   ],
   "description": "HellaEngine RPC message php code",
   "require": {
-    "php": ">=5.3.0"
+    "php": ">=5.6.0",
+    "phpunit/phpunit": "^5.0"
   },
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "HellaEngine\\RPCMessage\\": "/src/RPCMessage"
+      "HellaEngine\\RPCMessage\\": "src/HellaEngine/RPCMessage"
     }
   },
   "authors": [
