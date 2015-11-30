@@ -12,4 +12,11 @@ namespace HellaEngine\RPCMessage;
 class RPCMessage
 {
 
+    /**
+     * RPCMessage constructor.
+     */
+    public function __construct()
+    {
+
+    }
 }
