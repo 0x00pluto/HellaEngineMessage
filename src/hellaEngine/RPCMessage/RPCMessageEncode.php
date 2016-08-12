@@ -7,6 +7,7 @@
  */
 
 namespace hellaEngine\RPCMessage;
+
 use hellaEngine\RPCMessage\Exceptions\encodeMessageException;
 
 
@@ -84,12 +85,15 @@ class RPCMessageEncode
                 return null;
             }
 
-            $messages = json_decode($messagesData, true);
+            $jsonDecodeMessages = json_decode($messagesData, true);
+            $messages = [];
 
             if ($alloc) {
-                foreach ($messages as $key => $value) {
-                    $messages[$key] = RPCMessage::createWithArray($value);
+                foreach ($jsonDecodeMessages as $key => $jsonDecodeMessage) {
+                    $messages[$key] = RPCMessage::createWithArray($jsonDecodeMessage);
                 }
+            } else {
+                $messages = $jsonDecodeMessages;
             }
         } catch (\Exception $e) {
             return null;

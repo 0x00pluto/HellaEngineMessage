@@ -9,10 +9,10 @@
 namespace hellaEngine\RPCMessage;
 
 
-/**
- * Class RPCMessage struct
- * @package HellaEngine\RPCMessage
- */
+    /**
+     * Class RPCMessage struct
+     * @package HellaEngine\RPCMessage
+     */
 /**
  * Class RPCMessage
  * @package HellaEngine\RPCMessage
@@ -209,7 +209,7 @@ class RPCMessage
      * 获取消息体
      * @return array
      */
-    protected function getMessageBody()
+    public function getMessageBody()
     {
         return isset($this->_messageData[self::MessageData_Body]) ? $this->_messageData[self::MessageData_Body] : [];
     }
@@ -230,14 +230,6 @@ class RPCMessage
     public function fromArray(array $arr)
     {
         $this->_messageData = $arr;
-    }
-
-    /**
-     * RPCMessage constructor.
-     */
-    public function __construct()
-    {
-
     }
 
 
@@ -285,6 +277,34 @@ class RPCMessage
         $message = new self();
         $message->fromArray($arr);
         return $message;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getCommand()
+    {
+        return $this->getMessageBody();
+    }
+
+
+    /**
+     * 加密形成网络消息
+     * @return string
+     */
+    public function encode()
+    {
+        return RPCMessageEncode::encodeMessages([$this]);
+    }
+
+    /**
+     * @param $netMessage
+     * @return RPCMessage[]|null
+     */
+    static public function decode($netMessage)
+    {
+        return RPCMessageEncode::decodeMessages($netMessage, true);
     }
 
 
