@@ -24,6 +24,7 @@ class RPCMessageEncodeTest extends \PHPUnit_Framework_TestCase
 
         $messageString = RPCMessageEncode::encodeMessages($messages);
 
+
         $this->assertNotEmpty($messageString);
 
 

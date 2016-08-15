@@ -307,5 +307,14 @@ class RPCMessage
         return RPCMessageEncode::decodeMessages($netMessage, true);
     }
 
+    /**
+     * 返回RPC调用
+     * @return RPCMessageReturn
+     */
+    public function toRpcMessageReturn()
+    {
+        return RPCMessageReturn::createWithRPCMessage($this);
+    }
+
 
 }

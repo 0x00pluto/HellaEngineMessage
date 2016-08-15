@@ -50,4 +50,12 @@ class RPCMessageTest extends \PHPUnit_Framework_TestCase
     }
 
 
+    public function testEncode()
+    {
+        $message = RPCMessage::createWithRpc('a.a', ['b' => 123], 2);
+
+        self::assertNotEmpty($message->encode());
+    }
+
+
 }
