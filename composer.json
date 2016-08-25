@@ -1,7 +1,6 @@
 {
   "name": "hella-engine/rpc-message",
   "type": "library",
-  "version": "1.0.4",
   "keywords": [
     "rpc",
     "rpc-message"
