@@ -54,7 +54,23 @@ class RPCMessageTest extends \PHPUnit_Framework_TestCase
     {
         $message = RPCMessage::createWithRpc('a.a', ['b' => 123], 2);
 
-        self::assertNotEmpty($message->encode());
+        $encodeMessage = $message->encode();
+        self::assertNotEmpty($encodeMessage);
+
+        $decodeMessages = RPCMessage::decode($encodeMessage);
+
+        self::assertNotEmpty($decodeMessages);
+        self::assertEquals(count($decodeMessages), 1);
+        /**
+         * @var $decodeMessage RPCMessage
+         */
+        $decodeMessage = end($decodeMessages);
+
+        self::assertTrue($decodeMessage instanceof RPCMessage);
+
+        self::assertEquals('a.a', $decodeMessage->getFunctionName());
+        self::assertEquals(['b' => 123], $decodeMessage->getFunctionParams());
+
     }
 
 

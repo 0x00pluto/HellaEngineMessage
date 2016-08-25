@@ -288,6 +288,16 @@ class RPCMessage
         return $this->getMessageBody();
     }
 
+    public function getFunctionName()
+    {
+        return $this->getMessageBodyProperty(self::Msg_RPC_FunctionName);
+    }
+
+    public function getFunctionParams()
+    {
+        return $this->getMessageBodyProperty(self::Msg_PPC_FunctionParams);
+    }
+
 
     /**
      * 加密形成网络消息
